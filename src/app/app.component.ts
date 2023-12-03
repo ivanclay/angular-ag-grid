@@ -137,9 +137,7 @@ export class AppComponent {
       this.rowData = this.rowsGridOne;
     }
 
-    const statusBarComponent = this.gridApi.getStatusPanel<IClickableStatusBar>(
-      'statusBarCompKey'
-    )!;
+    const statusBarComponent = this.gridApi.getStatusPanel<IClickableStatusBar>('statusBarCompKey')!;
     // statusBarComponent.setVisible(!statusBarComponent.isVisible());
     statusBarComponent.refreshPaginationPaositionOnLoadNewData();
 
