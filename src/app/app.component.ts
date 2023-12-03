@@ -21,10 +21,10 @@ export interface IClickableStatusBar {
 @Component({
   selector: 'my-app',
   template: `<button
-      (click)="toggleStatusBarComp()"
+      (click)="toggleRowDataChange()"
       style="margin-bottom: 10px"
     >
-      Toggle Status Bar Component
+      Toggle RowData Change
     </button>
     <ag-grid-angular
       style="width: 100%; height: 90%;"
@@ -130,7 +130,8 @@ export class AppComponent {
 
   public themeClass: string = "ag-theme-quartz";
 
-  toggleStatusBarComp() {
+  // toggleStatusBarComp() {}
+  toggleRowDataChange() {
     if(this.rowData?.length === this.rowsGridOne?.length){
       this.rowData = this.rowsGridTwo;
     }else{
